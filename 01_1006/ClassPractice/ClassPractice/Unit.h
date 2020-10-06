@@ -11,6 +11,10 @@ public:
 	// デストラクタ
 	~Unit();
 
+	// ステータス表示
+	void PrintStatus();
+
+private:
 	int m_hp;
 	int m_str;
 	int m_mag;
