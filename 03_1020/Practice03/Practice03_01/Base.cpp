@@ -7,10 +7,20 @@ Base::Base()
 	m_PosX	= 0.0f;
 	m_PosY	= 0.0f;
 	m_MoveSpeed	= 1.0f;
+
+	m_Width	 = 10;
+	m_Height = 10;
 }
 
 Base::~Base()
 {
+}
+
+// 引数の矩形情報と、自分が当たっているか判定
+bool Base::CheckHit(int x, int y, int width, int height)
+{
+	// 何かしらの当たり判定
+	return false;
 }
 
 void Base::SetHp(int hp)
@@ -27,6 +37,12 @@ void Base::SetPos(float x, float y)
 void Base::SetMoveSpeed(float speed)
 {
 	m_MoveSpeed = speed;
+}
+
+void Base::SetSize(int width, int height)
+{
+	m_Width  = width;
+	m_Height = height;
 }
 
 int Base::GetHp()
@@ -49,3 +65,12 @@ float Base::GetMoveSpeed()
 	return m_MoveSpeed;
 }
 
+int Base::GetWidth()
+{
+	return m_Width;
+}
+
+int Base::GetHeight()
+{
+	return m_Height;
+}
