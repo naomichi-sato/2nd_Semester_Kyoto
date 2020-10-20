@@ -17,10 +17,12 @@ Enemy::~Enemy()
 
 void Enemy::Exec()
 {
+	printf("EnemyのExec\n");
 }
 
 void Enemy::Draw()
 {
+	printf("EnemyのDraw\n");
 }
 
 // 引数の矩形情報と、自分が当たっているか判定
