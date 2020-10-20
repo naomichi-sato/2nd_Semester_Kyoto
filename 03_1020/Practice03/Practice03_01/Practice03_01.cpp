@@ -31,6 +31,15 @@ int main()
 	printf("MoveSpeed = %0.2f\n", enemy.GetMoveSpeed());
 	printf("\n");
 
+	if( player.CheckHit(10, 10, 20, 30) == false )
+	{
+		printf("“–‚½‚Á‚Ä‚¢‚Ü‚¹‚ñ\n");
+	}
+	if (enemy.CheckHit(10, 10, 20, 30) == false)
+	{
+		printf("“–‚½‚Á‚Ä‚¢‚Ü‚¹‚ñ\n");
+	}
+
 	system("pause");
 	return 0;
 }
