@@ -6,7 +6,8 @@ class A
 public:
 	// explicit 演算子の書き方
 	// explicit コンストラクタ(引数)
-	explicit A( int val )
+	A( int val )
+//	explicit A( int val )
 	{
 		std::cout << val << std::endl;
 	}
@@ -15,7 +16,8 @@ public:
 class B
 {
 public:
-	explicit B( const A& ref )
+	B( const A& ref )
+//	explicit B( const A& ref )
 	{
 	}
 };
