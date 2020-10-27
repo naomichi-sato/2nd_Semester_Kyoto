@@ -17,7 +17,7 @@ EnemyManager::~EnemyManager()
 		++itr )
 	{
 		// newで確保した各Enemyクラスを削除
-		delete* itr;
+		delete *itr;
 		*itr = nullptr;
 	}
 	// m_Enemiesにはnullptrが入ったBase*の配列が入っている
@@ -61,7 +61,7 @@ bool EnemyManager::DestoryEnemy(class Base* ptr)
 		// 可変長配列にptrと同じアドレスを持つものがあれば削除
 		if(*itr == ptr)
 		{
-			delete* itr;
+			delete *itr;
 			*itr = nullptr;
 			return true;
 		}
@@ -78,8 +78,8 @@ void EnemyManager::Exec()
 	{
 		if (*itr != nullptr)
 		{
-			Base* tmp = *itr;
-			tmp->Exec();
+			Base* ptr = *itr;
+			ptr->Exec();
 		}
 	}
 }
