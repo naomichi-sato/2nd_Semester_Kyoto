@@ -8,6 +8,16 @@ void Init( int& rhp, int& rmp )
 	rmp = 10;
 }
 
+// const 参照渡しをする関数
+void Print(const int& rhp, const int& rmp )
+{
+	// const参照は値を変更することができない
+//	rhp = 50;
+//	rmp = 10;
+	printf( "Hp = %d\n", rhp );
+	printf( "Mp = %d\n", rmp );
+}
+
 int main()
 {
 	// 参照型の書き方
@@ -34,9 +44,12 @@ int main()
 	// 引数に参照を持つ関数へ変数を渡すこと
 	int hp = 0;
 	int mp = 0;
-	Init( hp, mp );	// 参照渡し
-	printf("HP = %d\n", hp);
-	printf("MP = %d\n", mp);
+	Init( hp, mp );		// 参照渡し
+	Print( hp, mp );	// const参照渡し
+
+	// 参照渡しの注意点
+	// 実体のある変数しか渡せない
+//	Init( 50, 10 );
 
 	return 0;
 }
