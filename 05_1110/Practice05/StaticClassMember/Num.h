@@ -9,7 +9,9 @@ public:
 	void Print();
 
 private:
-	int m_Num;
+	// staticメンバ変数の作り方(宣言)
+	// static 型名 変数名
+	static int m_Num;
 };
 
 #endif	// #ifndef NUM_H
